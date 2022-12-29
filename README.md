@@ -1,13 +1,14 @@
-# jenkins-setup-docker
+# Use this repo if folloiwng RPT01 approach. 
+## jenkins-setup-docker
 
-  1. First execute the docker-setup.sh on master and slave nodes.
+  1. git clone this repo & execute the ./docker-setup.sh on master and slave nodes.
   2. Install Java and Maven on slave node.
-      yum install java-1.8.0-openjdk java-1.8.0-openjdk-devel -y **devel package is used for maven
-      
-  3. docker-compose up -d on Master node.
+      sudo yum install java-1.8.0-openjdk java-1.8.0-openjdk-devel -y **devel package is used for maven
+      sudo yum install maven 
+  3. docker-compose up -d on Master node. // docker-compose up -d --scale jenkins=3
   4. Configure Master via UI.
 
-# Configure Jenkins Cluster
+## Configure Jenkins Cluster
   
   1. Create the Jenkins master node
   2. Create the slave node.
