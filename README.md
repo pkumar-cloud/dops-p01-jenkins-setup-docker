@@ -17,8 +17,8 @@
   6. Got to the Jenkins UI > Manage Jenkins -> Manage Credentials.
   7. Create a new Credentials of Kind "SSH Username and private Key"
   8. Then go the Manage Jenkins -> Manage Node. Create a new node.
-      Number of executers
-      Remote root directory: /home/jenkins - on slave which folder to use for code checkout.
+      * <b> Number of executers
+      * <b> Remote root directory: /home/jenkins - on slave which folder to use for code checkout.
       Labels: define a label
       Launch method: Launch agents via SSH (Host:Slave IP/Name)
 
