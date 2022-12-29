@@ -1,7 +1,11 @@
 # jenkins-setup-docker
 
-  1. First execute the docker-setup.sh
-  2. docker-compose up -d
+  1. First execute the docker-setup.sh on master and slave nodes.
+  2. Install Java and Maven on slave node.
+      yum install java-1.8.0-openjdk java-1.8.0-openjdk-devel -y **devel package is used for maven
+      
+  3. docker-compose up -d on Master node.
+  4. Configure Master via UI.
 
 # Configure Jenkins Cluster
   
@@ -13,3 +17,9 @@
   6. Got to the Jenkins UI > Manage Jenkins -> Manage Credentials.
   7. Create a new Credentials of Kind "SSH Username and private Key"
   8. Then go the Manage Jenkins -> Manage Node. Create a new node.
+      Number of executers
+      Remote root directory: /home/jenkins - on slave which folder to use for code checkout.
+      Labels: define a label
+      Launch method: Launch agents via SSH (Host:Slave IP/Name)
+
+
